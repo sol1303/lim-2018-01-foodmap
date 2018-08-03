@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,11 +11,14 @@
 </head>
 
 <body>
+	<!-- <div id="splash">
+		<img class="imgSplash" src="img/splash.png" />
+	</div> -->
 	<div class="ui grid">
 		<div class="four wide column">
 			<div class="ui left fixed vertical labeled icon menu">
 				<div class="item">
-					<!-- <img class="ui mini image" src="/images/logo.png"> -->
+					<img class="ui mini image" src="img/logo.png">
 				</div>
 				<a class="item">
 					<i class="home icon"></i>
@@ -34,7 +37,7 @@
 			<div class="ui hidden divider"></div>
 			<!-- <div style="width: 230px"><iframe width="230" height="200" src="https://maps.google.com/maps?width=230&height=200&hl=es&coord=-12.1416088, -76.99181550000003&q=Santiago%20de%20Surco%2C%20Lima%20+(FoodMap)&ie=UTF8&t=&z=13&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
 			<div class="ui hidden divider"></div>
-<!-- Tipos de Restaurantes -->
+			<!-- Tipos de Restaurantes -->
 			<div class="ui accordion">
 				<!-- Todos lo restaurantes -->
 				<!-- Amázonica -->
@@ -43,183 +46,200 @@
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Amázonica</span>
 				</div>
-				<div class="content">
-					<table class="ui very basic table" id="amazon-table">
+				<div class="content" id="amazon-table">
+					<!-- <table class="ui very basic table" id="amazon-table">
 						<tbody id="">
 						</tbody>
-					</table>
+					</table> -->
+					<div id="hola"></div>
 				</div>
 				<!-- Americana -->
-				<div class="title">
+				<div class="title" id="american-restaurants">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
-					<span>Carnes y Parrillas</span>
+					<span>Americana</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="american-table">
 						</tbody>
 					</table>
 				</div>
 				<!-- Carnes y Parrillas -->
-				<div class="title">
+				<div class="title" id="meatandgrill-restaurants">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Carnes y Parrillas</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
-						</tbody>
-					</table>
-				</div>
-				<!-- Carnes y Parrillas Hamburguesas -->
-				<div class="title">
-					<i class="dropdown icon"></i>
-					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
-					<span>Carnes y Parrillas Hamburguesas</span>
-				</div>
-				<div class="content">
-					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="meatandgrill-table">
 						</tbody>
 					</table>
 				</div>
 				<!-- Chifa -->
-				<div class="title">
+				<div class="title" id="chifa-restaurants">
 					<i class="dropdown icon"></i>
-					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
+					<img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg">
 					<span>Chifa</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-chifa">
 						</tbody>
 					</table>
 				</div>
 				<!-- Fusión -->
-				<div class="title">
+				<div class="title" id="fusion-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Fusión</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-fusion">
 						</tbody>
 					</table>
 				</div>
 				<!-- India -->
-				<div class="title">
+				<div class="title" id="india-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>India</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-india">
 						</tbody>
 					</table>
 				</div>
 				<!-- Internacional -->
-				<div class="title">
+				<div class="title" id="international-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Internacional</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-international">
 						</tbody>
 					</table>
 				</div>
 				<!-- Italiana -->
-				<div class="title">
+				<div class="title" id="italian-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Italiana</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-italian">
 						</tbody>
 					</table>
 				</div>
 				<!-- Nikkei / Japonesa -->
-				<div class="title">
+				<div class="title" id="nikkei-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Nikkei / Japonesa</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-nikkei">
 						</tbody>
 					</table>
 				</div>
 				<!-- Peruana -->
-				<div class="title">
+				<div class="title" id="peruvian-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Peruana</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-peruavian">
 						</tbody>
 					</table>
 				</div>
 				<!-- Pescados y Mariscos -->
-				<div class="title">
+				<div class="title" id="fish-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
-					<span>Chifa</span>
+					<span>Pescados y Mariscos</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-fish">
 						</tbody>
 					</table>
 				</div>
 				<!-- Piqueos -->
-				<div class="title">
+				<div class="title" id="snack-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Piqueos</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-snack">
 						</tbody>
 					</table>
 				</div>
 				<!-- Pizzerías -->
-				<div class="title">
+				<div class="title" id="pizza-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Pizzerías</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-pizza">
 						</tbody>
 					</table>
 				</div>
 				<!-- Thai -->
-				<div class="title">
+				<div class="title" id="thai-restaurant">
 					<i class="dropdown icon"></i>
 					<!-- <img class="ui avatar image" src="../img/Palate-1_watermarked-e1472011334900.jpg"> -->
 					<span>Thai</span>
 				</div>
 				<div class="content">
 					<table class="ui very basic table">
-						<tbody id="">
+						<tbody id="table-thai">
 						</tbody>
 					</table>
 				</div>
 			</div>
 			<div class="ui hidden divider"></div>
+			
+			<!-- <button class="ui button yellow create_btn" type="button" id="test" >Create</button>
+			<div class="ui modal test">
+		<i class="close icon"></i>
+		<div class="header">
+			Profile Picture
+		</div>
+		<div class="image content">
+			<div class="ui medium image">
+				<img src="https://semantic-ui.com/images/avatar2/large/rachel.png">
+			</div>
+			<div class="description">
+				<div class="ui header">We've auto-chosen a profile image for you.</div>
+				<p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+				<p>Is it okay to use this photo?</p>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui black deny button">
+				Nope
+			</div>
+			<div class="ui positive right labeled icon button">
+				Yep, that's me
+				<i class="checkmark icon"></i>
+			</div>
+		</div>
+	</div> -->
 
+			<div class="ui hidden divider"></div>
 			<!-- Buscador -->
 			<div class="ui icon input">
 				<input id="search-restaurant" type="text" placeholder="Busca...">
