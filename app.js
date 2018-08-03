@@ -1,15 +1,12 @@
+$(function(){
+  setTimeout(function() {
+     $('#splash').fadeOut(500);
+  }, 2000);
+});
+
 // Acordeón
 $('.ui.accordion')
   .accordion();
-
-$(function () {
-  $("#test").click(function () {
-    $(".test").modal('show');
-  });
-  $(".test").modal({
-    closable: true
-  });
-});
 
 const restaurantTable = document.getElementById('restaurant-table');
 const searchByName = document.getElementById('search-restaurant');
@@ -126,31 +123,25 @@ const filterRest = (type, lugartabla) => {
     for (rest of restFilter) {
       trPlace.innerHTML += `
       <tr class="collapsing">
-      <th>${rest.restaurant}
-      <button class="ui button yellow create_btn" type="button" id="${rest.restaurant}">Create</button>
+      <th>${rest.restaurant}</th>
+      <th><button class="ui button create_btn" type="button" id="${rest.restaurant}">Ver +</button>
 	  <div class="ui modal test">
   <i class="close icon"></i>
   <div class="header">
-    Profile Picture
+    <h5>${rest.restaurant}</h5>
   </div>
   <div class="image content">
     <div class="ui medium image">
       <img src="https://semantic-ui.com/images/avatar2/large/rachel.png">
     </div>
     <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
+    <div class="ui list">
+    <div class="item">${rest.address}</div>
+    <div class="item">${rest.price}</div>
+    <div class="item">${rest.type}</div>
+  </div>
     </div>
   </div>
-  <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
-      <i class="checkmark icon"></i>
-    </div>
   </div>
 </div>
       </th>
@@ -158,8 +149,9 @@ const filterRest = (type, lugartabla) => {
     </tr>
     `
     }
-let idRest = rest.restaurant
+let idRest = ``
     $(function(){
+      idRest = rest.restaurant
       $("#"+idRest).click(function(){
         $(".test").modal('show');
       });

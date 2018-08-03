@@ -6,7 +6,7 @@ img {
   display: inline-block !important;
 }
 
-/* #splash {
+#splash {
   position:fixed;
   top: 0;
   left:0;
@@ -21,7 +21,7 @@ img {
   margin-top: 50%;
   margin-left: 20%;
   width: 60%;
-} */
+}
 
 a {
   cursor: pointer;
