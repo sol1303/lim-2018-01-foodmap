@@ -1,6 +1,6 @@
-$(function(){
-  setTimeout(function() {
-     $('#splash').fadeOut(500);
+$(function () {
+  setTimeout(function () {
+    $('#splash').fadeOut(500);
   }, 2000);
 });
 
@@ -38,6 +38,8 @@ const pizzaRest = document.getElementById('pizza-restaurant');
 const tablePizza = document.getElementById('table-pizza');
 const thaiRest = document.getElementById('thai-restaurant');
 const tableThai = document.getElementById('table-thai');
+const restModal = document.getElementById('modal-restaurant');
+let totalRestaurant;
 
 const restaurantJson = () => {
   let xhr = new XMLHttpRequest();
@@ -46,6 +48,7 @@ const restaurantJson = () => {
     if (xhr.readyState == 4 && xhr.status == 200) {
       let xhrRestaurant = JSON.parse(xhr.responseText);
       listRestaurant(xhrRestaurant);
+      totalRestaurant = xhrRestaurant
     }
   }
   xhr.send();
@@ -124,9 +127,41 @@ const filterRest = (type, lugartabla) => {
       trPlace.innerHTML += `
       <tr class="collapsing">
       <th>${rest.restaurant}</th>
-      <th><button class="ui button create_btn" type="button" id="${rest.restaurant}">Ver +</button>
-	  <div class="ui modal test">
-  <i class="close icon"></i>
+      <th><button class="ui button create_btn" type="button" id="${rest.restaurant}" onclick="filterModal('${rest.restaurant}')">Ver +</button>
+	  
+      </th>
+      <th>${rest.type}</th>
+    </tr>
+    `
+    }
+    return restFilter;
+  }
+}
+
+const filterModal = (id) => {
+  const filter = totalRestaurant.filter(restaurant => {
+    return restaurant.restaurant === id
+  })
+  filter.map(restaurant => {
+createModal(restaurant)
+  })
+}
+
+// const showModal = $( function(id){
+//   $("#"+id).click(function(){
+//     $(".test").modal('show');
+//   });
+//   $(".test").modal({
+//     closable: true
+//   });
+// });
+
+
+const createModal = (rest) => {
+  restModal.innerHTML = ``
+  restModal.innerHTML =
+  `<div class="ui modal active test" id="show-modal">
+  <i class="close icon" onclick="closeModal()"></i>
   <div class="header">
     <h5>${rest.restaurant}</h5>
   </div>
@@ -143,24 +178,11 @@ const filterRest = (type, lugartabla) => {
     </div>
   </div>
   </div>
-</div>
-      </th>
-      <th>${rest.type}</th>
-    </tr>
-    `
-    }
-let idRest = ``
-    $(function(){
-      idRest = rest.restaurant
-      $("#"+idRest).click(function(){
-        $(".test").modal('show');
-      });
-      $(".test").modal({
-        closable: true
-      });
-    });
-    return restFilter;
-  }
+</div>`
+}
+
+const closeModal = () => {
+  document.getElementById('show-modal').classList.remove("active");
 }
 
 amazonRest.addEventListener('click', () => {
